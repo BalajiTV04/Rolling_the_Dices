@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dice Roll Game</title>
+    <style>
+        body { text-align: center; margin-top: 60px; font-family: Arial; }
+        button { padding: 15px 25px; background: #167ae4; color: white;
+                border: none; border-radius: 6px; font-size: 20px; cursor: pointer; }
+        button:hover { background: #5980a7; }
+        .output { font-size: 70px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<h1>🎲 Dice Rolling Game</h1>
+{% if result %}
+    <div class="output">{{ result }}</div>
+{% endif %}
+
+{% if exit_msg %}
+    <h2>{{ exit_msg }}</h2>
+{% endif %}
+
+<br><br>
+
+<a href="/roll"><button>Roll Dice</button></a>
+<a href="/exit"><button>Exit</button></a>
+
+</body>
+</html>
